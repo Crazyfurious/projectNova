@@ -65,13 +65,19 @@
         lo dudes y deja en nuestras manos toda la atención personalizada que requiere un
         paso tan importante y decisivo en la vida.
       </p>
-      <a href="#" class="button cuidate_cta">¡¡Comencemos!!</a>
+      <form>
+        <div><input id="nombre" type="text" placeholder="Ingresa el nombre" class="">
+        <input id="edad" type="number" placeholder="Ingrese su edad" class=""></div>
+        <div><input id="peso" type="number" placeholder="Ingrese su peso (kg)" class="">
+        <input id="altura" type="number" placeholder="Ingrese su altura (cm)" class=""></div>
+        <button id="boton" type="reset" class="" style="margin-top: 10px;" onclick="datosClientes();"> Agregar</button>
+      </form>
+      <!-- <a href="#" class="button cuidate_cta" onclick="Clientes()">¡¡Comencemos!!</a> -->
     </div>
   </section>
 
-  
-  
 
   <script src="app/js/index.js"></script>
+  <script src="app/js/calculos.js"></script>
 </body>
 </html>
