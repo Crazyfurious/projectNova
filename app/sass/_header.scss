@@ -1,0 +1,199 @@
+.header {
+
+  &.open {
+
+    .overlay {
+      display: block;
+      animation: fade-in 300ms ease-in-out forwards;
+    }
+  }
+
+  .overlay {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 3.75rem;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: linear-gradient($orangeYellow, transparent);
+    animation: fade-out 300ms ease-in-out forwards;
+  }
+
+  nav {
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+  }
+
+  &__logo {
+
+    img {
+        height: 1.375rem;
+        width: 8.8125rem;
+    }
+
+  }
+
+  &__menu {
+    position:absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: $beige;
+    margin-top: 1.5rem;
+    padding: 1.625rem;
+    border-radius: 3px;
+
+    a {
+        display: block;
+        color: $indigoDye;
+        padding: 0.625rem;
+        text-align: center;
+    }
+
+  }
+
+  &__links {
+
+
+    a {
+      position: relative;
+      font-size: $font-sm;
+      color: $sweetBrown;
+      transition: color 200ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 5px;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        background: linear-gradient(to right, rgba(8, 61, 119, 0.87), rgba(83, 161, 243, 0.533));
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+      }
+
+      &:hover {
+        color: $indigoDye;
+      
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    font-size: $font-sm;
+    color: black;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+#header
+{
+    position: flex;
+    top: 8%;
+    right: 0;
+    left: 25%;
+    width: 13px;
+    margin: 0 auto;
+    transform: translateY(-50%) scale(2);
+
+    &.open {
+
+      .overlay {
+        display: block;
+        animation: fade-in 300ms ease-in-out forwards;
+      }
+    }
+    
+  &__menu_button
+  {
+      width: 39px;
+      overflow: hidden;
+  }
+
+  &__menu_checkbox
+  {
+      display: none;
+  }
+
+  &__menu_label
+  {
+      position: relative;
+      display: block;
+      height: 23px;
+      cursor: pointer;
+  }
+
+  &__menu_label:before, &__menu_label:after, &__menu_text_bar
+  {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+  }
+
+  &__menu_label:before, &__menu_label:after
+  {
+      content: '';
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left;
+  }
+
+  &__menu_label:before
+  {
+      top: 0;
+  }
+
+  &__menu_label:after
+  {
+      top: 12px;
+  }
+
+  &__menu_text_bar
+  {
+      top: 24px;
+  }
+
+  &__menu_text_bar:before
+  {
+      content: 'MENU';
+      position: absolute;
+      top: 5px;
+      right: 0;
+      left: 0;
+      color: #000;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      text-align: center;
+  }
+
+  &__menu_checkbox:checked + &__menu_label:before
+  {
+      left: -39px;
+  }
+
+  &__menu_checkbox:checked + &__menu_label:after
+  {
+      left: 39px;
+  }
+
+  &__menu_checkbox:checked + &__menu_label &__menu_text_bar:before
+  {
+      animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
+  }
+
+}

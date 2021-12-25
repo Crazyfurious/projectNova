@@ -2,14 +2,75 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>projectNova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app/css/style.css">  
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Proyecto Nova | Javascript</title>
+
 </head>
 <body>
-  <h1>Chat de soporte</h1>
-  <p id="demo">Un párrafo</p>
-  <button onclick="saludo()">Bienvenido!!!!</button>
+  <header class="header">
+    <div class="overlay has_fade"></div>
+    <nav class="container flex flex-jc-sb flex-ai-c">
+        <a href="/" class="header__logo">
+          <img src="images/logo.svg" alt="logo" />
+        </a>
+
+        <!-- Menu para escritorio -->
+        <div class="header__links hide_for_mobile">
+          <a href="#" class="link">Inicio</a>
+          <a href="#" class="link">Servicios</a>
+          <a href="#" class="link">Productos</a>
+          <a href="#" class="link">Contacto</a>
+          <a href="#" class="link">Acerca de</a>
+        </div>
+
+        
+        <!-- Menu hamburguesa -->
+        <div id="btnHamburguer">
+          <a href="#" class="hide_for_mobile">Sign In</a>
+          <div id="header__menu_button" class="hide_for_desktop">
+            <input type="checkbox" id="header__menu_checkbox">
+            <label for="header__menu_checkbox" id="header__menu_label">
+              <div id="header__menu_text_bar"></div>
+            </label>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Menu hamburguesa movil -->
+    <div class="has_fade header__menu container hide_for_desktop">
+      <a href="#" class="link">Inicio</a>
+      <a href="#" class="link">Servicios</a>
+      <a href="#" class="link">Productos</a>
+      <a href="#" class="link">Contacto</a>
+      <a href="#" class="link">Acerca de</a>
+    </div>
+
+  </header>
+
+  <section class="cuidate">
+    <div class="cuidate__image"></div>
+    <div class="cuidate__text container">
+      <h1>
+        TRABAJO Y ESFUERZO, DEJARÁN TU IMPRONTA.
+      </h1>
+      <p>
+        Te ayudaremos en tu camino para la pérdida de peso, y el bienestar personal, no 
+        lo dudes y deja en nuestras manos toda la atención personalizada que requiere un
+        paso tan importante y decisivo en la vida.
+      </p>
+      <a href="#" class="button cuidate_cta">¡¡Comencemos!!</a>
+    </div>
+  </section>
+
+  
+  
 
   <script src="app/js/index.js"></script>
 </body>

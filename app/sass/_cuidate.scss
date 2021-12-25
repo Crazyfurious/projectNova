@@ -1,0 +1,30 @@
+.cuidate {
+
+  &__image {
+    position: relative;
+    background-image: url('/images/bg-intro-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left left;
+    min-height: 11rem;
+  }
+
+  &__text {
+    text-align: center;
+
+      h1 {
+        font-weight: 700;
+        font-size: 1.575rem;
+        line-height: 1.15;
+        color: $indigoDye;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        line-height: 1.5;
+        margin-bottom: 4.25rem;
+        color: $textCarbon;
+      }
+  }
+
+}
