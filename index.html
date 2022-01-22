@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="app/css/style.css">  
 
   <link rel="icon" type="image/png" sizes="32x32" href="">
+  <script src="https://kit.fontawesome.com/fa1d579b6e.js" crossorigin="anonymous"></script>
   
   <title>Proyecto Nova | Javascript</title>
 
@@ -29,7 +30,6 @@
           <a href="#" class="link">Contacto</a>
         </div>
 
-        
         <!-- Menu hamburguesa -->
         <div id="btnHamburguer">
           <a href="#" class="hide_for_mobile">Sign In</a>
@@ -52,35 +52,90 @@
 
   </header>
 
-  <section class="cuidate">
-    <div class="cuidate__image"></div>
-    <div class="cuidate__text container md-6">
-      <h1 id="encabezadoPrincipal">
+  <div class="cuidate__image"></div>
+
+  <section class="hero">
+    <div class="hero__image"></div>
+
+    <div class="class hero__text">
+      <h1>
         TRABAJO Y ESFUERZO, DEJARÁN TU IMPRONTA.
       </h1>
-      <p id="parrafoPrincipal">
+      <p>
         Te ayudaremos en tu camino <strong>para la pérdida de peso</strong> , y el bienestar personal, no 
         lo dudes y deja en nuestras manos toda la atención personalizada que requiere un
         paso tan importante y decisivo en la vida.
       </p>
     </div>
-      <div class="md-6">
-        <img src="/images/alimentos.jpg" alt="alimentos" />
+  </section>
+
+  <section class="secciones__primera hero__text">
+    <h2 class="">TODO BUEN FINAL, DEBE TENER UN COMIENZO</h2>
+    <p class="">En esta sección comenzarás nuestro proceso para conseguir la pérdida de peso que deseas,
+      Te ayudaremos paso a paso hasta conseguir tu objetivo, sin que por ello tengas que sufrir,
+      hacer dietas insufribles, pasar hambre o un torbellino de emociones impida que logres tus
+      objetivos y metas. Este el primer paso para alcanzar un estado saludable para que tu vida
+      fluya sin efectos perjudiciales en tu salud.
+    </p>
+    <a href="#" class="button cuidate_cta" onclick="mostrarPrimerForm()">¡¡Comencemos!!</a>
+  </section>
+
+  <!-- <section class="comenzar">
+    <div class="comenzar__envoltura">
+      <div class="comenzar__titulo">
+          <h2>NOVA</h2>
+          <p>Toma de datos iniciales
+          </p>
+      </div>
+      <div class="comenzar__primero">
+        <div class="comenzar__primero-bordes"></div>
+        <i id="cerrar" class="far fa-times-circle"></i>
+          <div class="comenzar__primero-info">
+            <h2>FORMULARIO</h2>
+            <p>Desde este formulario, facilitarás la información para poder calcular tu estado
+              de salud actual y orientarte sobre los siguientes pasos en el proceso de ayuda.
+            </p>         
+            <form>
+              <div><input id="nombre" type="text" placeholder="Ingresa el nombre" class="">
+              <input id="edad" type="number" placeholder="Ingrese su edad" class=""></div>
+              <div><input id="peso" type="number" placeholder="Ingrese su peso (kg)" class="">
+              <input id="altura" type="number" placeholder="Ingrese su altura (cm)" class=""></div>
+              <button id="boton" type="reset" class="" style="margin-top: 10px;" onclick="datosClientes();"> Agregar</button>
+            </form>
+          </div>
+        <div class="comenzar__primero-bordes"></div>
       </div>
     </div>
-    <div class="cuidate__text container">
-      <form>
-        <div><input id="nombre" type="text" placeholder="Ingresa el nombre" class="">
-        <input id="edad" type="number" placeholder="Ingrese su edad" class=""></div>
-        <div><input id="peso" type="number" placeholder="Ingrese su peso (kg)" class="">
-        <input id="altura" type="number" placeholder="Ingrese su altura (cm)" class=""></div>
-        <button id="boton" type="reset" class="" style="margin-top: 10px;" onclick="datosClientes();"> Agregar</button>
-      </form>
-      <!-- <a href="#" class="button cuidate_cta" onclick="Clientes()">¡¡Comencemos!!</a> -->
+  </section>
+   -->
+
+  <section class="comenzar">
+    <div class="comenzar__envoltura">      
+      <div class="comenzar__primero">
+        <div class="comenzar__primero-bordes"></div>
+        <i id="cerrar" class="far fa-times-circle" onclick="cerrarPrimerForm()"></i>
+          <div class="comenzar__primero-info">
+            <h2>PROYECTO NOVA</h2>
+            <h4>TOMA DE DATOS INICIALES
+            </h4>
+            <p>Desde este formulario, facilitarás la información para poder calcular tu estado
+              de salud actual y orientarte sobre los siguientes pasos en el proceso de ayuda.
+            </p>         
+            <form>
+              <div><input id="nombre" type="text" placeholder="Ingresa el nombre" class="">
+              <input id="edad" type="number" placeholder="Ingrese su edad" class=""></div>
+              <div><input id="peso" type="number" placeholder="Ingrese su peso (kg)" class="">
+              <input id="altura" type="number" placeholder="Ingrese su altura (cm)" class=""></div>
+              <button id="boton" type="reset" class="" style="margin-top: 10px;" onclick="datosClientes();"> Agregar</button>
+            </form>
+          </div>
+        <div class="comenzar__primero-bordes"></div>
+      </div>
     </div>
   </section>
 
   <script src="/pruebas.js"></script>
+  <script src="app/js/jquery-3.6.0.min.js"></script>
   <script src="app/js/index.js"></script>
   <script src="app/js/calculos.js"></script>
 </body>

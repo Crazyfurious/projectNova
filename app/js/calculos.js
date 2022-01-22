@@ -18,11 +18,7 @@ function masaCorporal (peso, altura) {
   return imc;
 }
 
- /******************************************************* Definimos las variables *************************************************************************/
-
-// Definimos las variables para solicitar los datos
 // Aprovecho y asigno la funcion de letra capital al nombre para que salga ya formateado
-
 /* Creo que la funcion datosClientes() para llamarla desde un botón externo, dentro incluyo la creación
 del objeto Clientes, con los datos necesarios.*/ 
 
@@ -35,6 +31,9 @@ function datosClientes() {
         this.edad = edad;
   }
 
+ /******************************************************* Definimos las variables *************************************************************************/
+
+  // Definimos las variables para solicitar los datos
   // Asigno las variables para obtener los valores almacenados en los input
   let nombreClientes = document.getElementById('nombre').value;
   let edadClientes = document.getElementById('edad').value;
@@ -72,8 +71,8 @@ let saludo = document.createElement('div');
 saludo.innerHTML = "<h3>Saludos a todos</h3>";
 document.body.appendChild(saludo);
 
-const productos = {
-  id: 1, nombre : "Bebidas", precio: 30;
-  id: 2, nombre : "Alimentación", precio: 50;
-  id: 3, nombre : "Accesorios", precio: 40;  
-}
+const productos = [
+  { id: 1, nombre: "Bebidas", precio: 30 },
+  { id: 2, nombre: "Alimentación", precio: 50 },
+  { id: 3, nombre: "Accesorios", precio: 40  },
+ ];

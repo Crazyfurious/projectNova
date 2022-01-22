@@ -1,0 +1,198 @@
+#cerrar {
+  position: absolute;
+  top: 40px;
+  right: 45px;
+  font-size: 35px;
+  cursor: pointer;
+  color: $textCarbon;
+  z-index: 1;
+}
+
+.comenzar {
+  background: rgba(63, 63, 63, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+
+  &__envoltura {
+
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 950px;
+    transform: scale(0.6);
+    opacity: 0;
+    transition: 0.3s ease all;
+
+    &.mostrar {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+  }
+
+  // &__titulo {
+  //   flex-basis: 0;
+  //   flex-grow: 4;
+  //   height: 460px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   margin-right: 10px;
+  //   position: relative;
+  //   background-image: url('/images/weight-loss-vector-256x256.png');
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   z-index: -1;
+
+  //   ::after {
+  //     content: "";
+  //     position: absolute;
+  //     background: rgba(110, 145, 240, 0.55);
+  //     top: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     right: 0;
+  //     z-index: -1;
+  //   }
+    
+  //   ::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     right: 0;
+  //     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  //     z-index: -1;
+  //   } 
+
+  //   h2 {
+  //     font-family: 'Chiller';
+  //     font-size: 80px;
+  //     margin-bottom: 2px;
+  //     color: $beige;
+      
+  //   }
+
+  //   p {
+  //     font-size: 30px;
+  //     font-weight: 300;
+  //     margin-top: 2px;
+  //     color: $beige;
+  //   }
+
+  // }
+
+  &__primero {
+    flex-basis: 0;
+    flex-grow: 4;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    background: $fondos;
+    z-index: -1;
+
+    ::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+    }
+    
+    ::before {
+      content: "";
+      position: absolute;
+      background-image: url('/images/weight-loss-opacity.png');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-position-y: 50px;
+      opacity: .5;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    } 
+
+    h2 {
+      font-family: 'Chiller';
+      font-size: 80px;
+      margin-bottom: 2px;
+      color: $textCarbon;
+      z-index: 1;
+      
+    }
+
+    p {
+      font-size: 30px;
+      font-weight: 300;
+      margin-top: 2px;
+      color: $beige;
+    }
+
+    &-bordes {
+      width: 100%;
+      height: 5%;
+      background: $bordes;
+    }
+
+    &-info {
+      align-items: center;
+      margin
+
+      h2 {
+        font-weight: 500;
+        font-size: 40px;
+        color: $textCarbon;
+        margin: 0px 0px 0px 40px;
+      }
+
+      h4 {
+        font-weight: 500;
+        font-size: 30px;
+        color: $textCarbon;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: $textCarbon;
+      }
+    }
+
+  }
+
+  &__segundo {
+    
+  }
+
+  &__tercero {
+    
+  }
+
+  &__cuarto {
+    
+  }
+}
+
+.mostrar {
+  visibility: visible;
+}

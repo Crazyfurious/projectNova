@@ -21,3 +21,13 @@ btnHamburguer.addEventListener('click', function(){
     });
   }
 });
+
+function mostrarPrimerForm() {
+  $('.comenzar').addClass('mostrar');
+  $('.comenzar__envoltura').addClass('mostrar');
+}
+
+function cerrarPrimerForm() {
+  $('.comenzar').removeClass('mostrar');
+  $('.comenzar__envoltura').removeClass('mostrar');
+}
