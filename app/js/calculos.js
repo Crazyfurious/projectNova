@@ -14,6 +14,7 @@ function letraCapital(dato) {
 function masaCorporal (peso, altura) {
   imc = (altura/100) * (altura/100);
   imc = peso / imc;
+  if (5 === 5)
   return imc;
 }
 
@@ -61,3 +62,18 @@ function insertarClientes() {
   alert("Actualmente tenemos " + listadoClientes.length + " clientes registrados");
 }
 
+let tituloPrincipal = document.getElementById('encabezadoPrincipal');
+let parrafo = document.getElementById('parrafoPrincipal');
+
+console.log(tituloPrincipal.innerText);
+console.log(parrafo.innerHTML); 
+
+let saludo = document.createElement('div');
+saludo.innerHTML = "<h3>Saludos a todos</h3>";
+document.body.appendChild(saludo);
+
+const productos = {
+  id: 1, nombre : "Bebidas", precio: 30;
+  id: 2, nombre : "Alimentación", precio: 50;
+  id: 3, nombre : "Accesorios", precio: 40;  
+}
