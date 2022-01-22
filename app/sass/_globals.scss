@@ -61,6 +61,8 @@ button, .button {
   cursor: pointer;
   color: black;
   font-weight: 700;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 // Medias o Mixins

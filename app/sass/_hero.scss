@@ -2,27 +2,10 @@
 
   background: $fondos;
   height: 100%;
-  min-height: 300px;
-
-  &__image {
-    // position: relative;
-    // background-image: url('/images/man-weight-loss.svg');
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // width: 100%;
-    // xcheight: 100%;
-    // min-height: 20rem;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   width: 144px;
-    //   height: 144px;
-    //   background-image: url('/images/nutricion-organica.svg');
-    //   background-repeat: no-repeat;
-    //   background-position: center center;
-    // }
-  }
+  min-height: 550px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 
   &__text {
     text-align: center;
@@ -47,8 +30,11 @@
 
     p {
       line-height: 1.5;
-      margin-bottom: 1.25rem;
+      margin-bottom: 2.75rem;
       color: $textCarbon;
+      max-width: 95%;
+      margin: 1.75rem auto;
+      
     }
   }
 }

@@ -27,6 +27,10 @@
       }
   }
 
+  &__cta {
+    margin-top: 30px;
+  }
+
 }
 
 .secciones {
@@ -35,7 +39,10 @@
 
     background: $beige;
     height: 100%;
-    min-height: 300px;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
   }
 
