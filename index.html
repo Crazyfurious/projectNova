@@ -6,10 +6,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app/css/style.css">  
+  <link rel="stylesheet" href="app/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <link rel="icon" type="image/png" sizes="32x32" href="">
-  <script src="https://kit.fontawesome.com/fa1d579b6e.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/fa1d579b6e.js" crossorigin="anonymous"></script> -->
   
   <title>Proyecto Nova | Javascript</title>
 
@@ -25,10 +26,29 @@
         <!-- Menu para escritorio -->
         <div class="header__links hide_for_mobile">
           <a href="#" class="link">Inicio</a>
-          <a href="#" class="link">Servicios</a>
+          <a href="#" class="ancla cuidate__cta link" data-ancla="serviciosListado">Servicios</a>
           <a href="#" class="link">Productos</a>
           <a href="#" class="link">Contacto</a>
         </div>
+        
+        <div class="">
+          <img src="/images/carrito.png" width="48px" id="">
+          <div id="carrito">                  
+            <table id="lista__carrito" class="">
+              <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th></th>
+                  </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <a href="#" id="vaciar__carrito" class="button">Vaciar Carrito</a>
+          </div>
+      </div>
 
         <!-- Menu hamburguesa -->
         <div id="btnHamburguer">
@@ -80,35 +100,6 @@
     <a href="#" class="button cuidate__cta" onclick="mostrarPrimerForm()">¡¡Comencemos!!</a>
   </section>
 
-  <!-- <section class="comenzar">
-    <div class="comenzar__envoltura">
-      <div class="comenzar__titulo">
-          <h2>NOVA</h2>
-          <p>Toma de datos iniciales
-          </p>
-      </div>
-      <div class="comenzar__primero">
-        <div class="comenzar__primero-bordes"></div>
-        <i id="cerrar" class="far fa-times-circle"></i>
-          <div class="comenzar__primero-info">
-            <h2>FORMULARIO</h2>
-            <p>Desde este formulario, facilitarás la información para poder calcular tu estado
-              de salud actual y orientarte sobre los siguientes pasos en el proceso de ayuda.
-            </p>         
-            <form>
-              <div><input id="nombre" type="text" placeholder="Ingresa el nombre" class="">
-              <input id="edad" type="number" placeholder="Ingrese su edad" class=""></div>
-              <div><input id="peso" type="number" placeholder="Ingrese su peso (kg)" class="">
-              <input id="altura" type="number" placeholder="Ingrese su altura (cm)" class=""></div>
-              <button id="boton" type="reset" class="" style="margin-top: 10px;" onclick="datosClientes();"> Agregar</button>
-            </form>
-          </div>
-        <div class="comenzar__primero-bordes"></div>
-      </div>
-    </div>
-  </section>
-   -->
-
   <section class="comenzar">
     <div class="comenzar__envoltura">      
       <div class="comenzar__primero">
@@ -134,8 +125,160 @@
     </div>
   </section>
 
-  <script src="/pruebas.js"></script>
+  <!-- SERVICIOS ----------------------------->
+  <section class="secciones__tercera hero__text">
+    <h2 class="">NUESTROS SERVICIOS</h2>
+    <a href="#" class="button ancla cuidate__cta" data-ancla="serviciosListado">¡¡Llévame!!</a>
+    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus quidem veritatis porro magnam quia aliquid corporis fugiat exercitationem doloribus perferendis. At aut, mollitia quos illo nulla officia error optio obcaecati!
+    Unde sit, minima quaerat nemo atque omnis corporis consequatur maxime asperiores officiis adipisci quos quidem obcaecati velit dolor illo voluptas. Nulla mollitia ullam in eius qui porro earum quasi enim?
+    Quae ut minus accusantium laboriosam, excepturi quod blanditiis. Nemo nihil ratione excepturi accusantium, vitae veritatis vel dolore voluptatem aperiam voluptas ad nobis odit nostrum magni. Est ut velit dicta voluptatum!
+    Recusandae labore nobis asperiores quos esse reiciendis, dolorum non nostrum commodi maxime sint quaerat ducimus corporis incidunt soluta fugiat a quo. Odio facere laudantium porro, harum laborum rerum officiis maiores!
+    Similique, non eligendi? Rerum inventore, ad aspernatur dignissimos, qui voluptates animi expedita velit soluta magni tempore consequuntur nemo minima temporibus nisi impedit. Quos placeat, cumque incidunt nulla accusamus fuga sequi.
+    Illum provident a ea hic nisi ullam minus, saepe sunt eveniet ad harum dolorem, blanditiis temporibus tempora inventore necessitatibus reprehenderit enim modi cum deleniti praesentium doloremque ut. Ratione, asperiores nisi.
+    Natus dolorum illum ut nulla rem at provident molestias, quas, expedita facere tempore ratione suscipit nesciunt numquam fugit. Expedita debitis dolore accusamus possimus harum dolores rerum deserunt exercitationem eius quod?
+    Aliquam tenetur exercitationem dolores soluta cum. Exercitationem sequi, praesentium quas, ex repudiandae dolorum culpa iste assumenda beatae aliquam molestias hic esse enim cumque ratione veritatis et. Neque, dicta nam. Nesciunt.
+    Cumque asperiores repudiandae et debitis dolorem accusamus esse. Nemo nesciunt debitis libero fugiat necessitatibus eum, consequatur atque vitae quasi possimus quam recusandae vero cumque repudiandae amet molestiae ex perspiciatis aut.
+    Nulla, neque non eaque officiis labore mollitia facilis esse at ratione dolorem quidem harum dignissimos? Ipsum magnam possimus nisi rem commodi et. Suscipit, ipsa animi! Libero quia enim minima earum.
+    Nostrum cum beatae id provident saepe, tempore possimus eaque enim. Illo dolores laboriosam hic eius praesentium, repellat, alias enim adipisci tempore porro nobis. Vitae natus debitis voluptates, incidunt id nisi?
+    Distinctio accusantium numquam dolores deserunt sed praesentium, quas voluptatibus repudiandae sapiente placeat? Illum autem officiis magnam? Quisquam in similique blanditiis totam, quae nostrum facere voluptatem, nisi officia sed aperiam tenetur!
+    Molestiae, aut ad omnis accusamus nostrum praesentium quia dolore aliquid ab, cum soluta eligendi. Voluptatum, qui dignissimos autem, alias quasi molestiae beatae voluptatem error odit quibusdam odio quidem aut ipsam?
+    Porro laboriosam fugiat assumenda recusandae adipisci! Distinctio in ipsam obcaecati et sint doloribus labore ipsa. Assumenda voluptatum dolorum minima magnam ipsum enim ut omnis natus et perferendis. Possimus, fuga ut?
+    Assumenda, recusandae sint consequatur fugit quia, neque hic odio, blanditiis dignissimos harum dolorem. Deserunt corrupti, culpa eligendi voluptatum iusto necessitatibus id deleniti, ad sunt maiores quaerat nam impedit earum porro.
+    Ea ab itaque magni quasi placeat alias hic quidem, unde ducimus incidunt corrupti maiores vel quae dolorum voluptatum aspernatur distinctio minima nulla enim rem beatae eaque sit? Placeat, veniam officiis.
+    Ducimus, reprehenderit architecto distinctio ex quaerat commodi saepe. Aut tempora repellendus unde impedit, maiores delectus consequuntur labore harum nemo natus quaerat illo cupiditate dolore, dolorem sint. Pariatur voluptates est rem!
+    Aliquam, voluptate ab. Excepturi eum reiciendis quae quod necessitatibus blanditiis sapiente, placeat laudantium in cumque sed incidunt minima aut ipsum! Laudantium impedit libero ab. Sapiente eveniet commodi quasi velit eaque.
+    Excepturi ad laborum quas maxime est modi debitis recusandae corrupti architecto dolor aut facere, aspernatur fuga, eos et magnam tempora suscipit voluptate asperiores, ea quaerat laudantium! Optio accusamus quam facere.
+    Harum autem recusandae magni aliquid quo unde optio natus, totam accusamus impedit vitae molestias et iste repellendus quidem temporibus accusantium, adipisci, nihil architecto. Totam libero iure placeat numquam reiciendis quae.
+    Quas debitis maiores est quis delectus ducimus, eveniet officiis veritatis magni velit magnam, incidunt ex omnis mollitia consequuntur eius obcaecati. Provident quos similique odit cumque, nesciunt magni laboriosam quibusdam officiis?
+    Nemo dolore voluptatem itaque possimus saepe porro impedit earum accusantium deserunt, commodi quibusdam eveniet dolorem delectus doloribus facere voluptate beatae perferendis nihil nisi. Sapiente quibusdam nostrum sint deleniti, dolor iusto.
+    Libero est itaque quod dolorum nostrum deserunt dolore neque, architecto porro provident veniam temporibus voluptatum ut animi perferendis ipsum voluptate assumenda accusantium eaque iure voluptas magni ipsa possimus voluptatem! At.
+    Magnam perferendis reiciendis nostrum dignissimos amet voluptate quia iste? Nulla iusto consequuntur magnam ex, incidunt vero officiis quibusdam, perferendis mollitia nobis earum aspernatur quisquam. Doloremque, corrupti excepturi? Voluptas, ea tempore.
+    Atque fugit obcaecati illum aliquam tempore iusto iure nobis optio autem aut minima expedita incidunt ad quas corporis ducimus, distinctio eligendi assumenda perferendis id adipisci saepe rem. Delectus, provident accusantium!
+    Nulla, odit, voluptas odio voluptate consequatur beatae atque totam quaerat debitis quos impedit minus delectus culpa modi expedita optio animi harum eaque laborum cumque quis dolor obcaecati rerum. Libero, minus.
+    Nam atque eos, at unde quasi deleniti minima ipsa minus repudiandae reprehenderit quam accusantium molestiae cupiditate magni eligendi? Dolores distinctio asperiores ad deleniti, maiores assumenda corrupti quaerat tempore quisquam reiciendis.
+    Pariatur aperiam blanditiis ratione et? Porro illo, tempora modi eligendi sint ex eveniet ducimus ipsam necessitatibus blanditiis nobis! Hic, obcaecati ad nihil accusantium iusto beatae eius ratione doloribus assumenda tempora.
+    Enim repellendus optio beatae! Officiis, architecto alias, saepe iure ab ut iusto cum nihil necessitatibus repellendus quia nesciunt expedita tempora hic quam vel earum aperiam sint quas odio sunt! Beatae.
+    Error vero impedit quos delectus expedita reiciendis? Ipsum quae quasi non consectetur, doloribus facere saepe aliquid. Officiis numquam ex suscipit, tempore ea quidem repudiandae unde, porro iure nam assumenda deserunt?
+    Recusandae molestias velit facilis ducimus nostrum enim, fuga esse debitis consequatur, harum sed fugit? Cupiditate quidem, expedita at velit, quas ipsam provident aut consequuntur nobis consectetur eum quasi, est laborum.
+    Consequuntur tempore ullam rem similique repellendus praesentium provident aliquid eaque nam inventore. Omnis neque tenetur obcaecati dolores iste corporis facere fugit, debitis quia magnam nostrum delectus rem dicta reprehenderit libero.
+    Mollitia repellat, voluptatum officiis ratione vitae voluptatem eligendi vel reprehenderit animi consequatur magnam libero, nemo velit est eveniet aliquid ipsa inventore! Quis id illo dolore vel explicabo dolores ratione consequuntur.
+    Eius quaerat deserunt assumenda doloremque explicabo placeat beatae quia sapiente vitae voluptatibus debitis magnam quam, maxime molestiae veritatis! Tenetur facilis nisi praesentium libero provident, reprehenderit animi veritatis distinctio in beatae!
+    Assumenda obcaecati aspernatur ratione quas debitis eos nesciunt? Exercitationem, molestias iure consectetur deleniti sit blanditiis doloribus inventore corrupti laboriosam! Cumque dolore similique consequatur aliquam tempora, aperiam officia nulla eaque beatae!
+    Unde delectus ratione cum atque, itaque aperiam nihil pariatur ipsam eveniet consectetur omnis id sapiente numquam! Eos ea odit aliquid tempore quisquam! Dolor, officiis! Aliquid, reprehenderit. Voluptatem harum adipisci quos?
+    Maxime illo numquam laudantium aliquid eos saepe suscipit vitae veritatis similique tempora esse dolore quo nisi eligendi dicta, provident dolorum iste molestiae! Fuga necessitatibus aperiam sed earum rerum veritatis suscipit.
+    Ipsa saepe dignissimos neque totam nam eveniet, sit recusandae libero a quasi, perferendis aut incidunt harum delectus nobis nesciunt, quibusdam at illum omnis! Doloribus dicta hic quidem sint iusto quo!
+    Earum similique magnam perferendis iusto necessitatibus dolor, tempore exercitationem numquam laboriosam, commodi quia odit, aliquid maiores ducimus voluptate labore fuga! Temporibus iusto amet suscipit accusamus provident rem voluptatibus delectus deserunt?
+    Laboriosam, minima sint. Accusamus nemo est exercitationem vero excepturi eligendi veniam nihil tempore culpa ab. Enim eaque, quasi quos omnis id molestiae amet unde. Placeat facilis minima eligendi id fugit!
+    Eligendi quo, amet harum est porro similique sequi beatae voluptas a labore tempore nesciunt necessitatibus nemo consectetur ab? Magnam facilis dolorum ullam soluta eum sint voluptate corporis itaque quaerat fugit.
+    Modi quibusdam velit hic eaque autem repellat? Vel, amet nostrum omnis aut sunt laboriosam? Optio, architecto rerum! Aliquid tenetur amet fugiat esse possimus illum molestiae unde eius. Veniam, assumenda reiciendis!
+    Doloribus aut, dolore eos iusto similique error! Magnam quia facilis repellat, placeat provident necessitatibus doloribus sapiente nostrum eius adipisci minima ipsa ea eaque ullam at eum alias beatae quas nobis.
+    Repellendus earum, dolorum ratione eum tenetur nulla, nisi vero asperiores culpa natus inventore in nostrum cupiditate, numquam itaque odit officia quas aliquid exercitationem alias. Amet cupiditate vero sequi repellendus tempora!
+    Repudiandae sint deleniti blanditiis excepturi dolorum eos repellat rem esse, provident quisquam doloribus optio ipsa ipsam libero est, quidem, voluptatibus laboriosam commodi error? Iure in dolor suscipit expedita architecto quisquam!
+    Eius possimus sed esse numquam sit omnis fugit maiores eum ab aliquid. Id, voluptas rerum. Sapiente, adipisci? Recusandae nesciunt aut mollitia saepe! Delectus iusto incidunt molestias quidem dolores, nesciunt sint?
+    Deleniti impedit illum rem aperiam amet consectetur, dignissimos, odio eos quo quis quod aliquid in, minima expedita consequatur blanditiis tempora similique non repudiandae beatae inventore ex perspiciatis fuga totam! Sapiente.
+    Ducimus ratione, vel laudantium ullam nesciunt iusto atque quos explicabo aspernatur quis molestiae ad temporibus, adipisci ea provident! Enim, vero nam. Quia cupiditate iste maxime enim quos voluptas soluta dolorum?
+    Dolor, totam dignissimos. Repudiandae voluptatem temporibus maxime deleniti saepe, vitae atque obcaecati corrupti eaque itaque placeat libero non nihil ullam alias optio, ex architecto magnam nisi at? Eligendi, inventore nesciunt!
+    Deserunt est aperiam iste! Adipisci consectetur officia provident recusandae beatae ratione repellendus mollitia, aperiam ipsum hic aut saepe ducimus ipsa nulla dolore corrupti perferendis incidunt est perspiciatis omnis! Quam, laborum?
+    </p>
+
+  </section>
+  <p id="serviciosListado"></p>
+  <!-- LISTADO DE SERVICIOS ----------------------------->
+  <h2 class="listadoServicios">LISTADO DE SERVICIOS</h2>
+  <div id="lista__servicios" class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="centrar__B"><img src="/images/servicios/nClinica.png" class="imagen-curso"></div>
+        <div class="precio__linea"><h4>Nutrición Clínica</h4><p class="precio">100 €</p></div>
+        <p>Tratamiento dietético-nutricional en diabetes, dislipemias, alergias, trastornos digestivos, hipertensión arterial, hiperuricemia, enfermedades autoinmunes, etc.</p>
+        <div class="centrar__A"><a href="#" class="button agregar-carrito" data-id="1">Comprar</a></div>
+      </div>
+      <div class="col-md-4">
+        <div class="centrar__B"><img src="/images/servicios/nPeso.png" class="imagen-curso"></div>
+        <div class="precio__linea"><h4>Control de peso</h4><p class="precio">200 €</p></div>
+        <p>Dietas de adelgazamiento personalizadas, con educación nutricional y mejora de hábitos a corto, medio y largo plazo.</p>
+        <div class="centrar__A"><a href="#" class="button agregar-carrito" data-id="2">Comprar</a></div>
+      </div>
+      <div class="col-md-4">
+        <div class="centrar__B"><img src="/images/servicios/nPediatrica.png" class="imagen-curso"></div>
+        <div class="precio__linea"><h4>Nutrición Pediátrica</h4><p class="precio">300 €</p></div>
+        <p>Resolución de dudas en la alimentación de los más pequeños, mejora de hábitos, problemas de sobrepeso y en enfermedades.</p>
+        <div class="centrar__A"><a href="#" class="button agregar-carrito" data-id="3">Comprar</a></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="centrar__B"><img src="/images/servicios/nEmbarazo.png" class="imagen-curso"></div>
+        <div class="precio__linea"><h4>Nutrición de embarazo</h4><p class="precio">250 €</p></div>
+        <p>Planificaciones dietético-nutricionales adaptadas a las necesidades específicas de cada momento, en estas etapas en las que la demanda nutricional se ve aumentada.</p>
+        <div class="centrar__A"><a href="#" class="button agregar-carrito" data-id="4">Comprar</a></div>
+      </div>
+      <div class="col-md-4">
+        <div class="centrar__B"><img src="/images/servicios/nVegetariana.png" class="imagen-curso"></div>
+        <div class="precio__linea"><h4>Comida Vegetariana</h4><p class="precio">350 €</p></div>
+        <p>Tanto si tu objetivo es llevar una alimentación vegana o vegetariana de forma saludable, como si te acabas de iniciar en este modelo alimentario.</p>
+        <div class="centrar__A"><a href="#" class="button agregar-carrito" data-id="5">Comprar</a></div>
+      </div>
+      <div class="col-md-4">
+        <div class="centrar__B"><img src="/images/servicios/nDeportiva.png" ></div>
+        <div class="precio__linea"><h4>Nutrición deportiva</h4><p class="precio">450 €</p></div>
+        <p>El objetivo de una buena alimentación, hidratación y suplementación en deportistas es conseguir un estado físico y de salud óptimo para realizar actividad física.</p>
+        <div class="centrar__A"><a href="#" class="button agregar-carrito" data-id="6">Comprar</a></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- PRODUCTOS ----------------------------->
+  <section class="secciones__cuarta hero__text">
+    <h2 class="">SELECCION DE PRODUCTOS</h2>
+    <p class="">Aquí podrás adquirir todos los productos, suplementos y vitaminas que te recomendamos tomar
+    mientras estés en proceso de pérdida de peso, o en lo opuesto, ganancia para adquirir mayor masa muscular.
+    
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem hic iusto, nesciunt est consequatur ex recusandae provident iure pariatur repudiandae accusantium omnis, animi ipsam explicabo non deleniti saepe quo minima?    
+    Maiores molestiae alias iusto dolores ducimus, cum voluptas! Eveniet expedita adipisci, in laudantium assumenda quidem rem culpa dolorem facere numquam accusantium, exercitationem molestias impedit excepturi doloremque dolor delectus, omnis magni!
+    Ad quas ipsa sed maiores, iure quidem quibusdam perspiciatis? Sequi aperiam commodi iure quasi, minus nostrum tenetur enim repellendus odit, obcaecati assumenda ratione quidem facilis laboriosam repellat perferendis ut non.
+    Molestias magni aliquid inventore provident quos porro consectetur modi incidunt nostrum deserunt magnam a voluptatum rem repellat ea nihil architecto id quasi, officiis ad dolore? Quae, quidem ipsam. Ipsa, nihil...
+    </p>
+    <a href="#" class="button ancla cuidate__cta" data-ancla="productosListado">¡¡Llévame!!</a>
+  </section>
+
+
+
+
+  <!-- LISTADO PRODUCTOS ----------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- CONTACTO ----------------------------->
+  <footer>
+
+  </footer>
+
+
+  <!-- ZONA DE SCRIPTS ----------------------------->
+
   <script src="app/js/jquery-3.6.0.min.js"></script>
+  <script src="app/js/carrito.js"></script>
+  <script src="app/js/animaciones.js"></script>
   <script src="app/js/index.js"></script>
   <script src="app/js/calculos.js"></script>
 </body>

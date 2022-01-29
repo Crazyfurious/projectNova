@@ -46,4 +46,76 @@
 
   }
 
+  &__segunda {
+
+    background: $segunda;
+    height: 100%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  &__tercera {
+
+    background: $tercera;
+    height: 100%;
+    min-height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  &__cuarta {
+
+    background: $cuarta;
+    height: 100%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+}
+
+.precio {
+  font-size: 30px;
+  text-align: right;
+  font-weight: 800;
+  margin-bottom: 0;
+
+  &__linea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.centrar {
+
+  &__A {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px 50px 0px;
+  }
+
+  &__B {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+.listadoServicios {
+
+  font-size: 50px;
+  text-align: center;
+  margin-top: 40px;
+
 }
