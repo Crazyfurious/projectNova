@@ -412,6 +412,57 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
+ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ol, ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+ul,
+ol {
+  margin-bottom: 2.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
 .container {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
@@ -806,5 +857,46 @@ button, .button {
   background-size: cover;
   z-index: -1;
   opacity: 0.9;
+}
+
+.submenu {
+  position: relative;
+}
+
+.submenu #carrito {
+  display: none;
+}
+
+.submenu:hover #carrito {
+  display: block;
+  position: absolute;
+  right: 200px;
+  top: 70px;
+  right: 0;
+  z-index: 1;
+  background-color: red;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
+}
+
+.u-full-width {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-pull-left {
+  float: left;
 }
 /*# sourceMappingURL=style.css.map */

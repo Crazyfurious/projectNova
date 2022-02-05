@@ -101,7 +101,7 @@ function carritoConvertir () {
       let { imagen, nombre, precio, cantidad, id } = servicio;
       let fila = document.createElement('tr');
       fila.innerHTML = `
-      <td><img src="${imagen}" /></td>
+      <td><img src="${imagen}" width="80px" /></td>
       <td>${nombre}</td>
       <td>${precio}</td>
       <td>${cantidad}</td>
