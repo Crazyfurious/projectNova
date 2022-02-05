@@ -182,8 +182,9 @@
 
 .hero {
   background: #FDFFEB;
+  opacity: 0.8;
   height: 100%;
-  min-height: 550px;
+  min-height: 720px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -193,6 +194,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 1;
 }
 
 .hero__text {
@@ -678,8 +680,9 @@ button, .button {
 
 .secciones__primera {
   background: #EBEBD3;
+  opacity: 0.9;
   height: 100%;
-  min-height: 550px;
+  min-height: 720px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -690,10 +693,12 @@ button, .button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 .secciones__segunda {
   background: #9E9E7E;
+  opacity: 0.9;
   height: 100%;
   min-height: 550px;
   display: -webkit-box;
@@ -706,10 +711,12 @@ button, .button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 .secciones__tercera {
-  background: #9E8786;
+  background: #E6EBB0;
+  opacity: 0.9;
   height: 100%;
   min-height: 850px;
   display: -webkit-box;
@@ -722,10 +729,11 @@ button, .button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
 .secciones__cuarta {
-  background: #EBBDBC;
+  background: #EBC9C7;
   height: 100%;
   min-height: 550px;
   display: -webkit-box;
@@ -789,5 +797,14 @@ button, .button {
   font-size: 50px;
   text-align: center;
   margin-top: 40px;
+  z-index: 1;
+}
+
+.fondoBody {
+  background: url("/images/bodyFondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.9;
 }
 /*# sourceMappingURL=style.css.map */
