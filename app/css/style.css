@@ -228,9 +228,11 @@
 
 #cerrar {
   position: absolute;
-  top: 40px;
-  right: 45px;
-  font-size: 35px;
+  top: 0px;
+  right: 0px;
+  margin: 1px 2px 0px 0px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   color: #636363;
   z-index: 1;
@@ -383,6 +385,11 @@ h2 {
   visibility: visible;
 }
 
+.arribaTodo {
+  position: relative;
+  z-index: 1;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -519,6 +526,11 @@ button, .button {
   }
 }
 
+.header__registro {
+  text-decoration: none;
+  font-size: 1.406rem;
+}
+
 .header.open .overlay {
   display: block;
   -webkit-animation: fade-in 300ms ease-in-out forwards;
@@ -545,7 +557,7 @@ button, .button {
 }
 
 .header__logo img {
-  height: 1.375rem;
+  height: 1.875rem;
   width: 8.8125rem;
 }
 
@@ -570,10 +582,11 @@ button, .button {
 
 .header__links a {
   position: relative;
-  font-size: 0.875rem;
+  font-size: 1.406rem;
   color: #A73439;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
+  text-decoration: none;
 }
 
 .header__links a:not(:last-child) {
@@ -643,7 +656,7 @@ button, .button {
 #header__menu_label {
   position: relative;
   display: block;
-  height: 23px;
+  height: 18px;
   cursor: pointer;
 }
 
@@ -670,7 +683,7 @@ button, .button {
 }
 
 #header__menu_text_bar {
-  top: 24px;
+  top: 18px;
 }
 
 #header__menu_text_bar:before {
@@ -697,6 +710,10 @@ button, .button {
 #header__menu_checkbox:checked + #header__menu_label #header__menu_text_bar:before {
   -webkit-animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
           animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
+}
+
+.headerLogos {
+  height: 1.875rem;
 }
 
 .cuidate__image {
@@ -870,7 +887,7 @@ button, .button {
 .submenu:hover #carrito {
   display: block;
   position: absolute;
-  right: -800%;
+  right: -300%;
   z-index: 1;
   background-color: white;
   padding: 20px;

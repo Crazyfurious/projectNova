@@ -1,8 +1,10 @@
 #cerrar {
   position: absolute;
-  top: 40px;
-  right: 45px;
-  font-size: 35px;
+  top: 0px;
+  right: 0px;
+  margin: 1px 2px 0px 0px;
+  width: 22px;
+  height: 22px; 
   cursor: pointer;
   color: $textCarbon;
   z-index: 1;
@@ -19,7 +21,7 @@
   left: 0;
   right: 0;
   visibility: hidden;
-
+  
   &__envoltura {
 
     display: flex;
@@ -195,4 +197,9 @@
 
 .mostrar {
   visibility: visible;
+}
+
+.arribaTodo {
+  position: relative;
+  z-index: 1;
 }

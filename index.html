@@ -19,10 +19,9 @@
   <header class="header">
     <div class="overlay has_fade"></div>
     <nav class="container flex flex-jc-sb flex-ai-c">
-        <a href="/" class="header__logo">
-          <img src="images/logo.svg" alt="logo" />
-        </a>
-
+        <div><a href="/" class="header__logo">
+          <img src="images/logo.svg" alt="logo" class="headerLogos" /></a>
+        </div>
         <!-- Menu para escritorio -->
         <div class="header__links hide_for_mobile">
           <a href="#" class="link">Inicio</a>
@@ -31,10 +30,10 @@
           <a href="#" class="link">Contacto</a>
         </div>
         
-        <div class="flex">
+        <div class="flex hide_for_mobile">
           <div>
             <div class="submenu">
-              <img src="/images/carrito.png" width="22px">
+              <img src="/images/carrito.png" class="headerLogos">
               <div id="carrito">                  
                 <table id="lista__carrito" class="u-full-width">
                   <thead>
@@ -52,17 +51,21 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>        
 
         <!-- Menu hamburguesa -->
         <div id="btnHamburguer">
-          <a href="#" class="hide_for_mobile">Sign In</a>
+
           <div id="header__menu_button" class="hide_for_desktop">
             <input type="checkbox" id="header__menu_checkbox">
             <label for="header__menu_checkbox" id="header__menu_label">
               <div id="header__menu_text_bar"></div>
             </label>
           </div>
+        </div>
+        <div>
+          <div><a href="#" class="hide_for_mobile header__registro">Iniciar Sesión</a></div>
+          <div class=""><p class="mb-0 mt-2">¿Eres nuevo?</p><a href="#" class="hide_for_mobile header__registro">Registrarse</a></div>
         </div>
     </nav>
 
@@ -110,8 +113,11 @@
     <div class="comenzar__envoltura">      
       <div class="comenzar__primero">
         <div class="comenzar__primero-bordes"></div>
-        <i id="cerrar" class="far fa-times-circle" onclick="cerrarPrimerForm()"></i>
           <div class="comenzar__primero-info">
+            <svg xmlns="http://www.w3.org/2000/svg" id="cerrar" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16" onclick="cerrarPrimerForm()">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
             <h2>PROYECTO NOVA</h2>
             <h4>TOMA DE DATOS INICIALES
             </h4>
@@ -119,11 +125,11 @@
               de salud actual y orientarte sobre los siguientes pasos en el proceso de ayuda.
             </p>         
             <form>
-              <div><input id="nombre" type="text" placeholder="Ingresa el nombre" class="">
-              <input id="edad" type="number" placeholder="Ingrese su edad" class=""></div>
-              <div><input id="peso" type="number" placeholder="Ingrese su peso (kg)" class="">
-              <input id="altura" type="number" placeholder="Ingrese su altura (cm)" class=""></div>
-              <button id="boton" type="reset" class="" style="margin-top: 10px;" onclick="datosClientes();"> Agregar</button>
+              <div><input id="nombre" type="text" placeholder="Ingresa el nombre" class="arribaTodo">
+              <input id="edad" type="number" placeholder="Ingrese su edad" class="arribaTodo"></div>
+              <div><input id="peso" type="number" placeholder="Ingrese su peso (kg)" class="arribaTodo">
+              <input id="altura" type="number" placeholder="Ingrese su altura (cm)" class="arribaTodo"></div>
+              <button id="boton" type="reset" class="arribaTodo" style="margin-top: 10px;" onclick="datosClientes();"> Agregar</button>
             </form>
           </div>
         <div class="comenzar__primero-bordes"></div>
@@ -283,9 +289,9 @@
   <!-- ZONA DE SCRIPTS ----------------------------->
 
   <script src="app/js/jquery-3.6.0.min.js"></script>
+  <script src="app/js/calculos.js"></script>
+  <script src="app/js/index.js"></script>
   <script src="app/js/carrito.js"></script>
   <script src="app/js/animaciones.js"></script>
-  <script src="app/js/index.js"></script>
-  <script src="app/js/calculos.js"></script>
 </body>
 </html>

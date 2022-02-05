@@ -104,8 +104,8 @@ function carritoConvertir () {
       <td><img src="${imagen}" width="80px" /></td>
       <td>${nombre}</td>
       <td>${precio}</td>
-      <td>${cantidad}</td>
-      <td><a href="#" class="eliminar__elementos" data-id="${id}" > X </a></td>
+      <td>${cantidad}</td>      
+      <td><a href="#"><img src="images/cancel.png" width="40px" class="eliminar__elementos" data-id="${id}" /></a></td>
       `;
       // Agregar los servicios a la tabla
       contenedorCarrito.appendChild(fila)

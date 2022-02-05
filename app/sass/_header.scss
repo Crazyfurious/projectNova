@@ -1,5 +1,10 @@
 .header {
 
+  &__registro {
+    text-decoration: none;
+    font-size: $font-hd;
+  }
+
   &.open {
 
     .overlay {
@@ -28,7 +33,7 @@
   &__logo {
 
     img {
-        height: 1.375rem;
+        height: 1.875rem;
         width: 8.8125rem;
     }
 
@@ -58,9 +63,10 @@
 
     a {
       position: relative;
-      font-size: $font-sm;
+      font-size: $font-hd;
       color: $sweetBrown;
       transition: color 200ms ease-in-out;
+      text-decoration: none;
 
       &:not(:last-child) {
         margin-right: 32px;
@@ -133,7 +139,7 @@
   {
       position: relative;
       display: block;
-      height: 23px;
+      height: 18px;
       cursor: pointer;
   }
 
@@ -164,7 +170,7 @@
 
   &__menu_text_bar
   {
-      top: 24px;
+      top: 18px;
   }
 
   &__menu_text_bar:before
@@ -196,4 +202,8 @@
       animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards;
   }
 
+}
+
+.headerLogos {
+  height: 1.875rem;
 }
