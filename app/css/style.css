@@ -440,7 +440,7 @@ li {
 th,
 td {
   padding: 12px 15px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #E1E1E1;
 }
 
@@ -870,11 +870,9 @@ button, .button {
 .submenu:hover #carrito {
   display: block;
   position: absolute;
-  right: 200px;
-  top: 70px;
-  right: 0;
+  right: -800%;
   z-index: 1;
-  background-color: red;
+  background-color: white;
   padding: 20px;
   min-height: 400px;
   min-width: 300px;
@@ -884,6 +882,8 @@ button, .button {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
 }
 
 .u-max-full-width {
