@@ -1,13 +1,62 @@
 
+// RECIBIR INFORMACIÓN
+const direccion = 'https://jsonplaceholder.typicode.com/todos/1'
 
+$("body").prepend('<button id="btnJson">Obtener Datos</button>');
 
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(
-    function(response) {
-      response.json().then (
-        function(data){
-          console.log(data);
-        }
-      )
+$("#btnJson").on("click", async () => {
+  
+  try {
+    let respuestaInicial = await axios.get(direccion)
+    let respuestaFinal = respuestaInicial.data
+    console.log(respuestaFinal);
+    console.log("Aquí");
+  }catch(err) {
+    console.log(err)
+  }
+  
+  // fetch(direccion)
+  //   .then( response => response.json())
+  //   .then ( data => console.log(data))
+  //   .catch( err => console.log(err))
+  
+})
+
+// ENVIAR DATOS
+// La url para hacer el GET
+const enviar = 'https://jsonplaceholder.typicode.com/posts'
+
+// Declaramos la info para enviar
+const infoPost = { nombre: "Ana", profesion: "Programadora" }
+
+// Botón con jquery
+$("body").prepend('<button id="btnPost">Enviar Datos</button>');
+
+$("#btnPost").on("click", () => {
+  $.post(enviar, infoPost, (respuesta, estado) => {
+    if(estado === "success") {
+      $("body").prepend(`<div>Guardado:${respuesta.nombre}</div>`);
     }
-  )
+  });    
+});
+
+// JSON LOCAL
+const datosLocal = "app/json/datos.json"
+
+// Agregamos un botón con jquery
+$("body").prepend('<button id="btnLocal">Datos Locales</button>');
+
+// Evento del click
+$("#btnLocal").on("click", () => {
+  $.getJSON(datosLocal, (respuesta, estado) => {
+    if(estado === "success") {
+      let misDatos = respuesta;
+      for (const dato of misDatos) {
+        $("body").prepend(`<div>
+                                <h3>${dato.id}</h3>
+                                <p>${dato.nombre}</p>
+                            </div>`)
+      }
+    }
+  });    
+});
