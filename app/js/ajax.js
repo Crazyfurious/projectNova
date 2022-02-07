@@ -2,7 +2,7 @@
 // RECIBIR INFORMACIÓN
 const direccion = 'https://jsonplaceholder.typicode.com/todos/1'
 
-$("body").prepend('<button id="btnJson">Obtener Datos</button>');
+$(`.ajax`).after('<button id="btnJson" class="mx-3">Obtener Datos</button>');
 
 $("#btnJson").on("click", async () => {
   
@@ -30,12 +30,12 @@ const enviar = 'https://jsonplaceholder.typicode.com/posts'
 const infoPost = { nombre: "Ana", profesion: "Programadora" }
 
 // Botón con jquery
-$("body").prepend('<button id="btnPost">Enviar Datos</button>');
+$(".ajax").after('<button id="btnPost" class="mx-3">Enviar Datos</button>');
 
 $("#btnPost").on("click", () => {
   $.post(enviar, infoPost, (respuesta, estado) => {
     if(estado === "success") {
-      $("body").prepend(`<div>Guardado:${respuesta.nombre}</div>`);
+      $(".ajax").after(`<div>Guardado:${respuesta.nombre}</div>`);
     }
   });    
 });
@@ -44,7 +44,7 @@ $("#btnPost").on("click", () => {
 const datosLocal = "app/json/datos.json"
 
 // Agregamos un botón con jquery
-$("body").prepend('<button id="btnLocal">Datos Locales</button>');
+$(".ajax").after('<button id="btnLocal" class="mx-3">Datos Locales</button>');
 
 // Evento del click
 $("#btnLocal").on("click", () => {
@@ -52,7 +52,7 @@ $("#btnLocal").on("click", () => {
     if(estado === "success") {
       let misDatos = respuesta;
       for (const dato of misDatos) {
-        $("body").prepend(`<div>
+        $(".ajax").after(`<div>
                                 <h3>${dato.id}</h3>
                                 <p>${dato.nombre}</p>
                             </div>`)
