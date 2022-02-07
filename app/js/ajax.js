@@ -46,7 +46,7 @@ const datosLocal = "app/json/datos.json"
 // Agregamos un botón con jquery
 $(".ajax").after('<button id="btnLocal" class="mx-3">Datos Locales</button>');
 
-// Evento del click
+//Evento del click
 $("#btnLocal").on("click", () => {
   $.getJSON(datosLocal, (respuesta, estado) => {
     if(estado === "success") {
@@ -55,8 +55,9 @@ $("#btnLocal").on("click", () => {
         $(".ajax").after(`<div>
                                 <h3>${dato.id}</h3>
                                 <p>${dato.nombre}</p>
-                            </div>`)
+                                     </div>`)
       }
+      $(".ajax").after('<button id="btnLocal" class="mx-3" onclick="location.reload()">Recargar</button>');
     }
   });    
 });
